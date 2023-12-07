@@ -1,6 +1,6 @@
 Name:		texlive-kaytannollista-latexia
-Version:	64278
-Release:	2
+Version:	67595
+Release:	1
 Summary:	Practical manual for LaTeX (Finnish)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/kaytannollista-latexia
