@@ -1,5 +1,5 @@
 Name:		texlive-kaytannollista-latexia
-Version:	69876
+Version:	71784
 Release:	1
 Summary:	Practical manual for LaTeX (Finnish)
 Group:		Publishing
