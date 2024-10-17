@@ -3,7 +3,7 @@ Version:	71784
 Release:	1
 Summary:	Practical manual for LaTeX (Finnish)
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/kaytannollista-latexia
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/kaytannollista-latexia
 License:	cc-by-sa-4
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kaytannollista-latexia.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kaytannollista-latexia.doc.r%{version}.tar.xz
