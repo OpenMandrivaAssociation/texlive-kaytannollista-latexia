@@ -1,38 +1,23 @@
-Name:		texlive-kaytannollista-latexia
-Version:	71784
-Release:	1
+%global tl_name kaytannollista-latexia
+%global tl_revision 77555
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2026
+Release:	%{tl_revision}.1
 Summary:	Practical manual for LaTeX (Finnish)
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/kaytannollista-latexia
+URL:		https://www.ctan.org/tex-archive/info/kaytannollista-latexia
 License:	cc-by-sa-4
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kaytannollista-latexia.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kaytannollista-latexia.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/kaytannollista-latexia.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/kaytannollista-latexia.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-"Kaytannollista Latexia" is a practical manual for LaTeX
-written in the Finnish language. The manual covers most of the
-topics that a typical document author needs. So it can be a
-useful guide for beginners as well as a reference manual for
-advanced users.
+"Kaytannollista Latexia" is a practical manual for LaTeX written in the
+Finnish language. The manual covers most of the topics that a typical
+document author needs. So it can be a useful guide for beginners as well
+as a reference manual for advanced users.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%doc %{_texmfdistdir}/doc/latex/kaytannollista-latexia
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
